@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="first-cont">
+      <nav>
+        <div class="nav-divv">
+          <img class="nav-img" src="./t3-removebg-preview.png" alt="">
+          <b class="nav-b1">MOTION</b>
+          <div class="new-div2">
+            <img class="new-image" src="./t4-removebg-preview.png" alt="">
+          </div>
+
+        </div>
+
+        <div class="nav-div1">
+          <a href="">Hotels</a>
+          <a href="">My Trips</a>
+          <a href="">Plan Trip</a>
+          <button class="nav-btn">Log in</button>
+        </div>
+      </nav>
+    </div>
+
+  </header>
+  <div class="container pad">
+    <br />    <br />
+    <div class="container2" id="cont">
+      <form class="formm" id="form-el1" action="tickets.html" method="get">
+        <select class="select-opt" id="type-trip">
+          <option>Return Trip</option>
+          <option>One way</option>
+          <option>Multi-city</option>
+        </select>
+        <input id="input-el1" class="inpt1" placeholder="Passenger(s)" type="number"> <br> <br>
+        <!-- <label  class="label1" for="">From:  -->
+        <select class="select3" id="input-el2">
+          <option hidden value="">From:</option>
+          <option value="Lagos Terminal(Lagos State)">Lagos Terminal(Lagos State)</option>
+          <option value="Yaba Railway Station(Lagos State)">Yaba Railway Station(Lagos State)</option>
+          <option value="Apapa Train Station">Apapa Train Station</option>
+          <option value="Kano Railway Station(Kano State)">Kano Railway Station(Kano State)</option>
+          <option value="Abuja Metro Station">Abuja Metro Station</option>
+        </select>
+        <!-- <input required class="main-inp" placeholder="From" type="text"> -->
+        </label>
+        <!-- <label id="input-el3" class="label2" for="">To:  -->
+        <select class="select3" id="input-el3">
+          <option hidden value="">To:</option>
+          <option value="Ilorin Railway Station(Kwara State)">Ilorin Railway Station(Kwara State)</option>
+          <option value="Abuja Metro Station">Abuja Metro Station</option>
+          <option value="Ibadan Train Station(Ayo)">Ibadan Train Station(Ayo)</option>
+          <option value="Lagos Terminal(Lagos State)">Lagos Terminal(Lagos State)</option>
+          <option value="Kano Railway Station(Kano State)">Kano Railway Station(Kano State)</option>
+        </select>
+        <!-- <input required class="inpt2" placeholder="" type="text"> -->
+        </label>
+        <label class="label2" for="">Travel Date:
+          <input id="input-el4" required class="inpt2" placeholder="" type="date">
+        </label>
+        <select class="select2" name="" id="input-el5">
+          <option hidden value="">Class</option>
+          <option>First-Class</option>
+          <option>Economy</option>
+        </select>
+        <label for="">
+          <input required id="input-el6" class="new-inpt1" type="text" placeholder="Enter Your Full Name">
+        </label>
+        <label for="">
+          <input required id="input-el7" class="new-inpt2" type="number" placeholder="Enter Age">
+        </label>
+        <label for="">
+          <input id="input-el8" class="new-inpt2" type="text" placeholder="Enter Adult Companion">
+        </label>
+        <p id="age-check"></p>
+        <div class="newest-div">
+          <button type="submit" class="proceed-btn">Submit</button>
+        </div>
+
+      </form>
+      <div class="new-img"><img src="./t2-removebg-preview.png" alt=""></div>
+    </div>
+    <div id="userDetails" class="hidden newInfo">
+      <p id="newInfo"></P>
+      <button class="new-edit" onclick="toToggle()">Edit</button>
+    </div>
+
+  </div>
+  <div id="newest-divvv" class="divvv1">
+    <h1 class="new-h1">PLAN A TRIP TODAY</h1>
+    <p class="neew-p">Plan an amazing trip with your family, are you looking for that memory you won't forget with your parthner ? <br> lover ?, here it is MOTION TRAINS got you covered  </p>
+    <div class="newest-cont">
+  
+      <div class="divv1">
+        <div class="new-divv">
+          <img src="./yang-wewe-UBe-M4bBxjw-unsplash.jpg" alt="">
+        </div>
+        <div class="neeww-d1"><a href="#">Personal Vaction</a> </div>
+      </div>
+      <div class="divv2">
+        <div class="new-divv">
+          <img src="./charbel-aoun-ShkrJTfECRs-unsplash.jpg" alt="">
+        </div>
+        <div class="neeww-d1"><a href="#">Me And Her</a> </div>
+      </div>
+      <div class="divv3">
+        <div class="new-divv">
+          <img src="./marissa-grootes-TVllFyGaLEA-unsplash.jpg" alt="">
+        </div>
+        <div class="neeww-d1"><a href="#">Business</a> </div>
+      </div>
+    </div>
+  
+  </div>
+
+
+
+
+<div class="hidden" id="second-container">
+
+  <h2 class="new-h2">TYPES OF TRAINS AVAILABLE AND SHEDULED TIME FOR TAKE OFF! BELOW</h2>
+  <div class="sect2">
+    <div class="s1-d1"  onclick="selectTrain('SERENE','4:45pm', 80000)">
+      <div class="s1-id1">
+        <img src="./s6.jpeg" alt="">
+      </div>
+      <div class="s1-id2">
+        <h4>My Space </h4>
+        <b>TIME:10:45pm</b> <br>
+        <button> &#8358 80.000.00</button>
+      </div>
+    </div>
+    <div class="s1-d2"  onclick="selectTrain('My Space','10:45pm', 30000)">
+      <div class="s1-id1">
+        <img src="./s4.jpeg" alt="">
+      </div>
+      <div class="s1-id2">
+        <h4> Cargo</h4>
+        <b>TIME:2:00pm</b> <br>
+        <button> &#8358 30.000.00</button>
+      </div>
+    </div>
+    <div class="s1-d3"  onclick="selectTrain('Cargo','2:00pm', 100000)">
+      <div class="s1-id1">
+        <img src="./s3.jpeg" alt="">
+      </div>
+      <div class="s1-id2">
+        <h4>Meet Luxury</h4>
+        <b>TIME:6:00pm</b> <br>
+        <button> &#8358 100.000.00</button>
+      </div>
+    </div>
+  </div>
+  <div class="sect1">
+    <div class="s1-d1" onclick="selectTrain('Meet Luxury','6:00pm', 20000)">
+      <div class="s1-id1">
+        <img src="./s1.jpeg" alt="">
+      </div>
+      <div class="s1-id2">
+        <h4>SERENE </h4>
+        <b>TIME:4:45pm</b> <br>
+        <button> &#8358 20.000.00</button>
+      </div>
+    </div>
+    <div class="s1-d2"  onclick="selectTrain('High Economy','8:45am', 50000)">
+      <div class="s1-id1">
+        <img src="./s2.jpeg" alt="">
+      </div>
+      <div class="s1-id2">
+        <h4>High Economy</h4>
+        <b>TIME:8:45am</b> <br>
+        <button> &#8358 50.000.00</button>
+      </div>
+    </div>
+    <div class="s1-d3"  onclick="selectTrain('Peers','12:45pm', 60000)">
+      <div class="s1-id1">
+        <img src="./s7.jpeg" alt="">
+      </div>
+      <div class="s1-id2">
+        <h4>Peers</h4>
+        <b>TIME:12:45pm</b> <br>
+        <button> &#8358 60.000.00</button>
+      </div>
+    </div>
+  </div>
+  <div class="section2">
+
+    <!-- <div class="inner-sec2">
+  <img src="./t7.jpeg" alt="">
+</div>
+<div class="inner2-sec2"> -->
+    <!-- <form id="form-el2" class="form-1" action="">
+    <label for="">
+      <input required id="input-el6" class="new-inpt1" type="text" placeholder="Enter Your Full Name">
+    </label> <br> <br>
+    <label for="">
+      <input required id="input-el7" class="new-inpt2" type="number" placeholder="Enter Age">
+    </label>
+    <br>
+    <p id="age-check"></p>
+    <button type="submit" class="form-btn1">Proceed</button>
+
+    <div  class="new-div3">
+      <input id="adult-inpt" class="new-input3" type="text" placeholder=" Adult Companion">
+    </div>
+  </form> -->
+  </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer2"></div>
+    <div class="innerf1">
+      <h1>Book Train Tickets Without Any Hassle</h1>
+      <p>Traveling by train is a popular choice for both short commutes and longer journeys, <br> and for a good reason. With over a thousand routes connecting cities in Nigeria, traveling <br> by train is the most convenient  mode of travel. The combination of price, convenience, <br> and speed makes train travel a sweet spot for discerning travelers. Travelers can now search <br> routes, check fares and book train tickets with Motion train booking  system. Moreover, <br>  Planning a trip <br> across Nigeria should be fun and easy. That’s  why, Motion  guarantees a hassle-free booking <br> process for booking your train tickets.  You can have your train  tickets book on Motion from  the comfort of your homes</p>
+      <div class="inner-footer">
+        <a href=""><img class="ig" src="./instagram.png" alt=""></a>
+        <a href="https://www.linkedin.com/feed/"><img class="ig" src="./linkedin.png" alt=""></a>
+        <a href="https://twitter.com/home"><img class="ig" src="./twitter.png" alt=""></a>
+      </div>
+    </div>
+    <div class="innerf2">
+      <h1>How Book Train Tickets Online with Motion Trains</h1>
+      <p>Thank you for choosing MOtion Trains it's a thing of joy seeing our services going out there <br> and been user friendly your joy is our goal you can simply start by:</p>
+      <ul>
+        <li>Fill in the first section of informtation that requires Type of trip, Passengers e.t.c </li>
+        <li>click Sumit and see the types of trains Available and sheduled take off time, choose <br> your prefered choice and time. </li>
+        <li>then you recieve your booking details and bring down to the station</li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

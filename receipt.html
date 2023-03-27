@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="first-cont">
+      <nav>
+        <div class="nav-divv">
+          <img class="nav-img" src="./t3-removebg-preview.png" alt="">
+          <b class="nav-b1">MOTION</b>
+          <div class="new-div2">
+            <img class="new-image" src="./t4-removebg-preview.png" alt="">
+          </div>
+
+        </div>
+  
+        <div class="nav-div1">
+          <a href="">Hotels</a> 
+          <a href="">My Trips</a>
+          <a href="">Plan Trip</a>
+          <button class="nav-btn">Log in</button>
+        </div>
+      </nav>
+    </div>
+<div class="r-div">
+  <p id="newInfo"></p>
+  <h1 class="newh1">THANK YOU FOR YOUR BOOKING!</h1>
+  <p>Payment will be made through <span><a href=""> flutterwave</a></span> link</p>
+  <B>Bring a Picture Of  This To The Station With You!</B>
+  <p>Ref:NEDS885FE892IJH6yG</p>
+  <p id="details-p"></p>
+  <div>
+    <img src="./new-t-removebg-preview.png" alt="">
+
+  </div>
+  <div class="new-img1"><img src="./t2-removebg-preview.png" alt=""></div>
+</div>
+  </header>
+</body>
+<link rel="stylesheet" href="./index.css">
+<script>
+  const newInfo = document.getElementById("newInfo");
+  const urlParams = new URLSearchParams(window.location.search);
+  const info  = urlParams.get("info")
+   let firstDetails= JSON.parse(info);
+ 
+
+
+
+
+   let newDiv = document.createElement('div')
+  let newP1 = document.createElement('p')
+  newP1.innerHTML = "Trip Type: "+firstDetails.type
+
+
+  let newP2 = document.createElement('p')
+  newP2.innerHTML = "passengers:"+firstDetails.passengers
+
+  let newP3 = document.createElement('p')
+  newP3.innerHTML = "from:"+firstDetails.from
+
+  let newP4 = document.createElement('p')
+  newP4.innerHTML = "To:"+firstDetails.to
+
+
+  let newP5 = document.createElement('p')
+  newP5.innerHTML = "Date:"+firstDetails.date
+
+  let newP6 = document.createElement('p')
+  newP6.innerHTML = "Time:"+firstDetails.time
+
+  let newP7 = document.createElement('p')
+  newP7.innerHTML = "Train type:"+firstDetails.trainType
+
+  let newP8 = document.createElement('p')
+  newP8.innerHTML = "Price: ₦" + firstDetails.price
+
+
+
+  newDiv.append(newP1, newP2, newP3, newP4, newP5, newP6, newP7, newP8)
+  newInfo.innerHTML="";
+  newInfo.appendChild(newDiv)
+</script>
+</html>
